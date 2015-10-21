@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% block content %}
+<br><br>
+<p>You have <span class="badge">{{count}}</span> tasks.   <button id="hideBtn">Show/Hide Comleted Tasks</button></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <ul class="list-group">
+        {% for task in tasks %}
+        <li class="list-group-item" status={{task.status}} id={{task._id}}>
+          {{task.task}}
+          <button type="button" class="btn btn-default btn-xs pull-right deleteBtn" aria-label="Trash">
+            <span class="glyphicon glyphicon-trash" aria-hidden="false"></span>
+          </button>
+          <button type="button" class="btn btn-default btn-xs pull-right doneBtn" aria-label="Trash">
+            <span class="glyphicon glyphicon-ok" aria-hidden="false"></span>
+          </button>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
