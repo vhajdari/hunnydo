@@ -1,9 +1,10 @@
 .Python
+/.Python
 .idea
-bin
-lib
-include
-/bin/*
-/include/*
 /.idea/*
+bin
+/bin/*
+lib
 /lib/*
+include
+/include/*
